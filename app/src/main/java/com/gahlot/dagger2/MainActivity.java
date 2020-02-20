@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.gahlot.dagger2.car.Car;
+import com.gahlot.dagger2.car.DeselEngineModule;
 import com.gahlot.dagger2.dagger.CarComponent;
+import com.gahlot.dagger2.dagger.DaggerCarComponent;
 
 import javax.inject.Inject;
 
@@ -19,7 +21,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        CarComponent component = DaggerCarComponent.create();
+        CarComponent component = DaggerCarComponent.builder().deselEngineModule(
+                new DeselEngineModule(100)
+        ).build();
+
         component.inject(this);
         car.drive();
     }

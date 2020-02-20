@@ -7,8 +7,7 @@ import javax.inject.Inject;
 public class PetrolEngine implements Engine {
 
     @Inject
-    public PetrolEngine() {
-    }
+    public PetrolEngine() {}
 
     private static final String TAG = "Car";
     @Override
