@@ -3,13 +3,16 @@ package com.gahlot.dagger2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.renderscript.ScriptIntrinsicConvolve3x3;
+
+import com.gahlot.dagger2.car.Car;
+import com.gahlot.dagger2.dagger.CarComponent;
 
 import javax.inject.Inject;
 
 public class MainActivity extends AppCompatActivity {
 
-    @Inject Car car;
+    @Inject
+    Car car;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
