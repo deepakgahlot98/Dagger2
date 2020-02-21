@@ -1,7 +1,7 @@
 package com.gahlot.dagger2.car;
 
 public class Wheels {
-    // thjis nis a thrid party library we cannot make changes
+    // this is a third party library we cannot make changes
 
     private Rims rims;
     private Tires tires;
